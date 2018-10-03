@@ -1,0 +1,54 @@
+html{height:100%;}
+
+*
+{
+margin:0px;
+padding:0px;
+outline:none;
+
+}
+
+body{
+    align-content: center; 
+background: #fff;
+padding:10px;
+font-family:'Source Sans Pro', sans-serif;
+color:#000;
+padding:0px;
+margin:0px;
+}
+
+aside
+{ align-content: center; 
+    padding: 10px; 
+height:940px;
+width:360px;
+background:#080808;
+}
+
+ul
+{
+text-align: center; 
+padding:0px;
+margin:0px;
+border-top: 20px; 
+
+}
+
+ul li
+{
+list-style-type:none;
+color:#f6fafa;
+padding:20px;
+
+overflow: auto;
+cursor:pointer;
+}
+
+
+.linktitle
+{
+line-height: 35px;
+padding-left: 10px;
+}
+

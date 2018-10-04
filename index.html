@@ -2,56 +2,62 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <title>Employee List</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+crossorigin="anonymous">
+
+
+<title>Employee List</title>
 </head>
 
 <body>
 
-  <aside>
-    <br>
-    <br>
-  
-    <ul class="linktitle">
 
-      <li>
-          <img src="https://www.freeiconspng.com/uploads/address-book-icon--mono-business-icons-2--softiconsm-7.png"
-              width="80" alt="Address Book Icon 
-           Mono Business Icons 2  SoftIconsm"  />
-          </li>
-          <li>
-        <div id="view">VIEW</div>
-      </li>
-      <li>
-        <div id="add">ADD</div>
-     
-      </li>
-      <li>
-        <div id="verify">VERIFY</div>
-     
-      </li>
-      <li>
-        <div id="update">UPDATE</div>
-    
-      </li>
-      <li>
-        <div id="delete">DELETE</div>
-     
-      </li>
-    </ul>
-  </aside>
+<div class="row">
+<div class="aside">
+<br>
+<!-- my aside content block starts here -->
+<ul>
 
-  
-    <div class="content">
-            <script src="employeeList.js"></script>
-    </div>
-      
+<li>
+<img src="https://www.freeiconspng.com/uploads/address-book-icon--mono-business-icons-2--softiconsm-7.png"
+width="80" alt="Address Book Icon"/>
+</li>
+<li>
+<div id="view">VIEW</div>
+</li>
+<li>
+<div id="add">ADD</div>
+</li>
+<li>
+<div id="verify">VERIFY</div>
+</li>
+<li>
+<div id="update">UPDATE</div>
+</li>
+<li>
+<div id="delete">DELETE</div>
+</li>
+</ul>
 
-  <script src="dom.js"></script>
-  <script src="app.js"></script>
+</div>
+<!-- my main content block starts here -->
+<div class="w-75 p-3" class="h-75" style="background-color: #eee;">
+<div id="content">
+<br>
+</div>
+</div>
+</div>
+
+
+<script src="dom.js"></script>
+<script src="employeeList.js"></script>
+<script src="app.js"></script>
 </body>
 
 </html>

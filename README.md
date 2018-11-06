@@ -1,2 +1,5 @@
-# employeedirectory
-Building an array of employees in an `employeeList` file using javascript 
+# Employee Directory / Personal Address Book 
+
+Web application builds an array of contacts in a `contactList` file using javascript. 
+
+

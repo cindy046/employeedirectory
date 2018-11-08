@@ -1,8 +1,13 @@
+
+
+
 // view function click to revel employee list table- showing each info title
 const clearContent = function () {
     $("#content").empty();
     }
     $("#view").on("click", clearContent);
+
+    // VIEW FUNCTION ///
     const viewFunction = function () {
     clearContent();
     console.log("view button was clicked");
@@ -33,6 +38,7 @@ const clearContent = function () {
     }
     $("#view").on("click", viewFunction);
     
+     // CHANGE PAGE FUNCTION ///
     $('.changePage').on('click', function(event) {
     clearContent();
     let buttonClicked = event.target.id;
@@ -51,10 +57,10 @@ const clearContent = function () {
     <input id="name">
     </td>
     <td>
-    <input id="number">
+    <input id="phoneNum">
     </td>
     <td>
-    <input id="number">
+    <input id="officeNum">
     </td>
     <td>
     <button id=${buttonClicked}
@@ -69,12 +75,13 @@ const clearContent = function () {
     console.log('button clicked');
     const whichFunction = event.target.id;
     if (whichFunction === 'add') {
-    addEmployee();
+    add();
     }
     else if(whichFunction === 'verify') {
     verifyEmployee();
     }
     else if(whichFunction === 'update') {
+        updatedEmployee();
     }
     else if (whichFunction === 'delete') {
     deleteEmployee();
@@ -83,47 +90,59 @@ const clearContent = function () {
     })
     })
     
-    function deleteEmployee() {
-    const employeeName = $('#name').val();
-    for (let i = 0; i < employeeList.length; i++) {
-    
-    if (employeeList[i].name === employeeName) {
-    employeeList.splice(i, 1);
-    }
-    }
-    }
-
-
-
-const addEmployee = function (){ 
-    const employeeName = $('#name').val();
-    for (let i = 0; i < employeeList.length; i++) {
-
-        if (employeeList[i].name === employeeName) {
-            employeeList.push(i, 1, employeeName, `<p>${employeeList[i].name}</p>`);
-        }
-    }
-}
-
-const verifyEmployee = function (){ 
-    const employeeName = $('#name').val();
-    for (let i = 0; i < employeeList.length; i++) {
-
-        if (employeeList === employeeName) 
-            alert ("This employee exists");
-      
-        else 
-        alert ("This employee does not exist");
-    }
-    clearContent();
-    }
-
-const updatedEmployee = function (){ 
-    const employeeName = $('#name').val();
-    for (let i = 0; i < employeeList.length; i++) {
-
-        if (employeeList[i].name === employeeName) {
+     // DELETE FUNCTION ///
+   
+    function deleteEmployee () {
+        const name = $('#name').val();
+        for (let i = 0; i < employeeList.length; i++) {
+          if (employeeList[i].name === name) {
             employeeList.splice(i, 1);
+          }
+        }
+        viewFunction();
+      }
+
+
+ // ADD FUNCTION ///
+const add = function (){ 
+    const name = $('#name').val();
+    const officeNum = $('#officeNum').val();
+    const phoneNum = $('#phoneNum').val();
+    employeeList.push({
+      name: name,
+      officeNum: officeNum,
+      phoneNum: phoneNum
+    })
+    viewFunction();
+  }
+ // VERIFY FUNCTION ///
+const verifyEmployee = function (){ 
+    const name = $('#name').val();
+    for (let i = 0; i < employeeList.length; i++) {
+
+        if (employeeList[i].name === name) 
+            alert ("This employee exists");
+            break;
+            
+    }
+       if (employeeList[i].name != name) 
+        alert ("This employee does not exist");break;
+       clearContent();
+    }
+
+     // UPDATE FUNCTION ///
+const updatedEmployee = function (){ 
+    const name = $('#name').val();
+    const officeNum = $('#officeNum').val();
+  const phoneNum = $('#phoneNum').val();
+    for (let i = 0; i < employeeList.length; i++) {
+
+        if (employeeList[i].name === name) {
+            employeeList[i].officeNum = officeNum;
+            employeeList[i].phoneNum = phoneNum;
+            break;
+            
         }
     }
+viewFunction(); 
 }

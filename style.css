@@ -1,7 +1,9 @@
 
 
 
-
+* {
+	box-sizing: border-box;
+  }
 
 html{height:100%;
     width: 100%;  
@@ -17,7 +19,7 @@ html{height:100%;
 .aside
 { align-content: center;
 font-family:'Source Sans Pro', sans-serif;
-height:990px;
+height: 130vh;
 width:360px;
 background:#080808;
 cursor:pointer;

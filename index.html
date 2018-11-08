@@ -2,62 +2,70 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet"
-href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- /style.css // -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
 
 
-<title>Employee List</title>
+    <!-- //bootstrap // -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+
+    <title>Employee List</title>
 </head>
 
 <body>
+    <div class="container-fluid">
 
+        <div class="row">
+            <div class="aside" >
+                <br>
+                <!-- my aside content block starts here -->
+                <ul>
 
-<div class="row">
-<div class="aside">
-<br>
-<!-- my aside content block starts here -->
-<ul>
+                    <li>
+                        <img src="https://www.freeiconspng.com/uploads/address-book-icon--mono-business-icons-2--softiconsm-7.png"
+                            width="80" alt="Address Book Icon" />
+                    </li>
+                    <li>
+                        <div id="view">VIEW</div>
+                    </li>
+                    <li>
+                        <div id="add" class="changePage">ADD</div>
+                    </li>
+                    <li>
+                        <div id="verify" class="changePage">VERIFY</div>
+                    </li>
+                    <li>
+                        <div id="update" class="changePage">UPDATE</div>
+                    </li>
+                    <li>
+                        <div id="delete" class="changePage">DELETE</div>
+                    </li>
+                </ul>
 
-<li>
-<img src="https://www.freeiconspng.com/uploads/address-book-icon--mono-business-icons-2--softiconsm-7.png"
-width="80" alt="Address Book Icon"/>
-</li>
-<li>
-<div id="view">VIEW</div>
-</li>
-<li>
-<div id="add" class="changePage">ADD</div>
-</li>
-<li>
-<div id="verify" class="changePage">VERIFY</div>
-</li>
-<li>
-<div id="update" class="changePage">UPDATE</div>
-</li>
-<li>
-<div id="delete" class="changePage">DELETE</div>
-</li>
-</ul>
+            </div>
+            <!-- my main content block starts here -->
 
-</div>
-<!-- my main content block starts here -->
-<div class="w-75 p-3" class="h-75" style="background-color: #eee;">
-<div id="content">
-<br>
-</div>
-</div>
-</div>
+            <div class="w-75 p-3" class="h-75" style="background-color: #eee;">
+                <div id="content">
+                    <div class="wrap">
+                        <br>
+                    </div>
+                </div>
+            </div>
 
+            <!-- //end content // -->
+            <script src="dom.js"></script>
+            <script src="employeeList.js"></script>
+            <script src="app.js"></script>
+        </div>
 
-<script src="dom.js"></script>
-<script src="employeeList.js"></script>
-<script src="app.js"></script>
+    </div>
 </body>
 
 </html>
